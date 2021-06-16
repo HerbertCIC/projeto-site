@@ -1,0 +1,110 @@
+<html>
+<title>Death Note</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="estilo.css">
+
+<style>
+  body 
+  {
+    font-family: "Lato", sans-serif;
+    background-image: url(6.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+</style>
+<script type="text/javascript">
+    function validacao()
+    {
+        if(document.form.nome.value=="")
+        {
+            alert("Por favor, preencha o campo nome.");
+            document.form.nome.focus();
+            return false;
+        }
+        if(document.form.nome.value=="" || document.form.nome.value.indexOf('@')==-1 || document.form.nome.value.indexOf('.') == -1)
+            {
+            alert("Por favor, digite um endereço de e-mail válido.");
+            document.form.nome.focus();
+            return false;
+            }
+        
+         if(document.form.senha.value.length < 8)
+        {
+        alert("A senha deve conter no mínimo 8 caracteres. ");
+        document.form.senha.focus();
+        return false;
+
+        }
+        
+        }
+</script>
+<body>
+
+<header>
+<!-- Menu -->
+<div class="top">
+  <div class="bar cblack " >  
+    <a href="index.html" class="itemMenu botoes padding-large" title="Home" >HOME</a>
+    <a href="historia.html" class="itemMenu botoes padding-large " title="Sobre" >SOBRE</a>
+    <a href="personagens.html" class="itemMenu botoes padding-large " title="Personagens" >PERSONAGENS</a>
+    <a href="capitulos.html" class="itemMenu botoes padding-large " title="Capitulos" >CAPITULOS</a>
+    <div class="dropdown-hover">
+      <a href="#" class="padding-large botoes" title="Mais">MAIS</a>     
+      <div class="dropdown-content cwhite">
+        <a href="cadastro.html">Cadastro</a>
+        <a href="http://pt.y8.com/games/death_note_type_game">Escreva no Death Note</a>
+      </div>
+    </div>
+  </div>
+</div>
+</header> 
+
+
+    
+
+                
+                    <form class="center" action="" method="post" name="form" id="formulario" onsubmit="return validacao();">
+                        <h3 style="width: 200px; margin-top: -100px">Já sou cadastrado</h3>
+
+                        <p >
+                            <label>Eu sou:</label>
+                            <select style="width: 250px" name="verificar" class="input border center" class=" center">
+                                <option value="admin" class="input border"  >Administrador</option>
+                                <option value="func" class="input border">Funcionário</option>
+                                <option value="user" class="input border">Usuário</option>
+                            </select>    
+                        </p>                
+
+                        <p>
+                            <label>Login:</label>
+                            <input  style="width: 250px;"  name="nome" type="text" placeholder="Login" class="input border">
+                        
+                        </p>
+                        <p >
+                            <label>Senha:</label>
+                            <input style="width: 250px"  name="senha" type="password" placeholder="Senha" class="input border">
+                        </p>
+
+                        <p>
+                            
+                            <button class="btn section w3-right" type="submit" style="margin-left: 80px" >ENVIAR</button>
+                        </p>
+                    </form>
+                </div>
+
+                <div id="formRight">    
+                    <div action="" method="post" name="form" id="form2" style="margin-top: -100px">
+                        <button  class="btn section w3-right" type="submit center" style="position: absolute;top: 20%;left: 45%">CADASTRAR</button>
+                    </div>
+                </div>
+
+            </div><!-- FIM CONTENT -->
+
+    </section>
+    <!-- Footer -->
+<footer class="footer container padding-32 center  cblack xlarge" style="position: relative;top:100%">
+  <a href="https://www.facebook.com/DeathNoteBR/?fref=ts" style="text-decoration: none" >Facebook</a>
+</footer>
+</body>
+</html>

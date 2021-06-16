@@ -1,0 +1,86 @@
+<html>
+<title>Death Note</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" type="text/css" href="estilo.css">
+
+<style>
+  body 
+  {
+    font-family: "Lato", sans-serif;
+  }
+  .mySlides 
+  {
+    display: none;
+  }
+</style>
+<body>
+
+<header>
+<!-- Menu -->
+<div class="top">
+  <div class="bar cblack " >  
+    <a href="index.html" class="itemMenu botoes padding-large" title="Home" >HOME</a>
+    <a href="historia.html" class="itemMenu botoes padding-large " title="Sobre" >SOBRE</a>
+    <a href="personagens.html" class="itemMenu botoes padding-large " title="Personagens" >PERSONAGENS</a>
+    <a href="capitulos.html" class="itemMenu botoes padding-large " title="Capitulos" >CAPITULOS</a>
+    <div class="dropdown-hover">
+      <a href="#" class="padding-large botoes" title="Mais">MAIS</a>     
+      <div class="dropdown-content cwhite">
+        <a href="cadastro.html">Cadastro</a>
+        <a href="http://pt.y8.com/games/death_note_type_game">Escreva no Death Note</a>
+      </div>
+    </div>
+  </div>
+</div>
+</header> 
+<!--Slides-->
+<div  class="slides mySlides center" style="background-image: url(1.jpg);"></div>
+<div class="slides mySlides center"  style="background-image: url(2.jpg);"></div>
+<div class="slides mySlides center"  style="background-image: url(4.jpg)"></div>
+<!--Titulo-->  
+<div id="titulo"><h1 title="Death_Note"><img src="title_deathnote.png" title="Death_Note" style="margin-left: 30% " ></h1>
+<!-- Footer -->
+<footer class="footer container padding-32 center cblack xlarge">
+  <a href="https://www.facebook.com/DeathNoteBR/?fref=ts">Facebook</a>
+</footer>
+
+<script>
+//  Slideshow Automático - muda imagem a cada 4 segundos
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 4000);    
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>
